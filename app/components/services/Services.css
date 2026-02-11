@@ -1,0 +1,26 @@
+
+/* this code is writton for Services page Pagination */
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: center !important;
+}
+
+.swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #9CA3AF !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #D0F94A !important;
+  transform: scale(1.2) !important;
+}
