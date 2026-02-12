@@ -134,42 +134,42 @@ const services = [
     icon: Shield,
     tab: "software",
   },
-   {
+  {
     title: "Web Application Development",
     description: "We design and develop secure, high-performance web applications that deliver seamless user experiences and support long-term scalability.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
     icon: Shield,
     tab: "software",
   },
-   {
+  {
     title: "Mobile App Development",
     description: "We create intuitive and scalable mobile applications for iOS and Android that enhance engagement, performance, and business growth.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
     icon: Shield,
     tab: "software",
   },
-   {
+  {
     title: "SaaS Development Services",
     description: "We build subscription-based SaaS platforms that are secure, scalable, and multi-tenant, designed to grow with users and evolving business demands.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
     icon: Shield,
     tab: "software",
   },
-   {
+  {
     title: "Product Engineering Services",
     description: "We help businesses design, build, and scale digital products from idea to launch, focusing on performance, reliability, and user impact.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
     icon: Shield,
     tab: "software",
   },
-   {
+  {
     title: "Software Testing & QA Services",
     description: "We ensure software quality through comprehensive testing that improves stability, reduces risk, and delivers reliable user experiences.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
     icon: Shield,
     tab: "software",
   },
-   {
+  {
     title: "Cybersecurity Services",
     description: "We protect your systems, data, and users with proactive security strategies, threat detection, and robust controls designed to safeguard businesses in complex digital environments.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
@@ -220,6 +220,24 @@ export default function CoreServices() {
     (service) => service.tab === tabs[activeTab].key
   );
 
+  // Tab click handler
+const handleTabClick = (index) => {
+  setActiveTab(index);
+  
+  // ScrollTrigger refresh for DevProcess animation
+  setTimeout(() => {
+    if (typeof window !== 'undefined') {
+      // Method 1: Direct refresh (agar gsap global accessible hai)
+      if (window.gsap?.ScrollTrigger) {
+        window.gsap.ScrollTrigger.refresh(true);
+      }
+      
+      // Method 2: Custom event dispatch (recommended - yeh DevProcess mein listener hai)
+      window.dispatchEvent(new CustomEvent('tabswitch'));
+    }
+  }, 50); // Thoda sa delay for DOM update
+};
+
   return (
     <section className="relative py-12 md:py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -246,7 +264,7 @@ export default function CoreServices() {
                 }`}
             >
               <button
-                onClick={() => setActiveTab(index)}
+                onClick={() => handleTabClick(index)} 
                 className={`relative group px-5 py-2 md:px-6 md:py-2.5 rounded-full w-full transition-all duration-300 font-medium text-14px md:text-[18px] overflow-hidden uppercase whitespace-nowrap cursor-pointer ${activeTab === index ? "bg-black text-white" : "bg-[#E3E3E3] text-black"
                   }`}
               >

@@ -197,8 +197,7 @@ export default function Leadership() {
               <img
                 src={head.image}
                 alt={head.name}
-                className="w-full h-full md:w-50 md:h-50 lg:w-55 lg:h-55 rounded-lg object-contain
-          bg-gradient-to-b from-[rgba(60,219,157,0.3)] from-[20%] to-[rgba(208,249,74,0.4)] to-[100%]"
+                className="w-full h-full md:w-50 md:h-50 lg:w-55 lg:h-55 rounded-lg object-contain bg-gradient-to-b from-[rgba(60,219,157,0.3)] from-[20%] to-[rgba(208,249,74,0.4)] to-[100%]"
               />
 
               {/* CONTENT */}
@@ -258,8 +257,7 @@ export default function Leadership() {
                 <img
                   src={head.image}
                   alt={head.name}
-                  className="w-24 h-24 md:w-40 md:h-40 rounded-full object-contain
-            bg-gradient-to-b from-[rgba(60,219,157,0.3)] from-[20%] to-[rgba(208,249,74,0.4)] to-[100%]"
+                  className="w-24 h-24 md:w-40 md:h-40 rounded-full object-contain bg-gradient-to-b from-[rgba(60,219,157,0.3)] from-[20%] to-[rgba(208,249,74,0.4)] to-[100%]"
                 />
 
                 {/* INFO */}

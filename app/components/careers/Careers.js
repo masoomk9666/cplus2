@@ -80,6 +80,7 @@ const Careers = () => {
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job, index) => (
               <Link
+              key={index}
                 href={`/careers/${job.slug}`}
                 className="block py-6 hover:bg-gray-50 transition"
               >

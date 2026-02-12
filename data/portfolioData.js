@@ -15,8 +15,8 @@ export const portfolioData = [
                 stars: 5,
                 text: `"We Build Intelligent, Secure, And Scalable Digital Solutions Tailored To The Unique Challenges Of Every Industry We Serve."`,
                 meta: {
-                    location: "HRTech / AI",
-                    industry: "LATAM & Europe",
+                    location: "LATAM & Europe",
+                    industry: "HRTech / AI",
                 },
             },
             image: "/images/industries/portfolios/teamx.png",

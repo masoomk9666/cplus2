@@ -2,8 +2,15 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import SkShadeBtn from '../layout/SkShadeBtn';
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+    const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
 
     const logos = [
         "/images/testimonials/marquee/01.png",
