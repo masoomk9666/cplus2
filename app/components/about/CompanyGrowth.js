@@ -78,10 +78,10 @@ const timelineData = [
 
 export default function CompanyGrowth() {
   return (
-    <section className="relative w-full h-auto lg:h-[400vh] xl:h-[350vh] overflow-hidden p-5 lg:p-5">
+    <section className="relative w-full h-auto lg:h-[450vh] xl:h-[350vh] overflow-hidden p-5 lg:p-5">
       <div className="relative max-w-7xl mx-auto space-y-6">
         <div
-          className="text-center px-4 opacity-100 space-y-4"
+          className="block lg:hidden text-center px-4 opacity-100 space-y-4"
         >
           <p className="uppercase tracking-widest text-[12px] md:text-[16px] text-black">
             Company Growth
