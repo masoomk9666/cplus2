@@ -78,7 +78,7 @@ const timelineData = [
 
 export default function CompanyGrowth() {
   return (
-    <section className="relative w-full h-auto md:h-[600vh] xl:h-[350vh] overflow-hidden p-5 lg:p-5 sk-company-growth">
+    <section className="relative w-full h-auto xl:h-[350vh] overflow-hidden p-5 lg:p-5 sk-company-growth">
       <div className="relative max-w-7xl mx-auto space-y-6">
         <div
           className="block lg:hidden text-center px-4 opacity-100 space-y-4"
