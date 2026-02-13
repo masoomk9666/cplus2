@@ -177,5 +177,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1000px) and (max-width: 1800px) {
+.sk-company-growth{
+height: 400vh;
+}
+}
+
 
 
