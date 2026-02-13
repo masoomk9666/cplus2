@@ -29,10 +29,10 @@ const Process = () => {
           name="careerAnimation"
           speed={2}
           />
-          <p className="hidden lg:block absolute bottom-3 left-32 text-[14px] md:text-[12px]">YOUR APPLICATION</p>
-          <p className="hidden lg:block absolute bottom-3 left-90 text-[14px] md:text-[12px]">EXPERT EVALUATION</p>
-          <p className="hidden lg:block absolute bottom-3 left-153 text-[14px] md:text-[12px]">PERSONAL INTERVIEW</p>
-          <p className="hidden lg:block absolute bottom-3 left-210 text-[14px] md:text-[12px]">SEAMLESS ONBOARDING</p>
+          <p className="hidden lg:block absolute bottom-0 left-15 text-[14px] md:text-[18px]">YOUR APPLICATION</p>
+          <p className="hidden lg:block absolute bottom-0 left-80 text-[14px] md:text-[18px]">EXPERT EVALUATION</p>
+          <p className="hidden lg:block absolute bottom-0 left-145 text-[14px] md:text-[18px]">PERSONAL INTERVIEW</p>
+          <p className="hidden lg:block absolute bottom-0 left-210 text-[14px] md:text-[18px]">SEAMLESS ONBOARDING</p>
           <p className="black lg:hidden text-[10px] md:text-[18px] text-center mt-5">OUR SEAMLESS APPLICATION PROCESS & ONBOARDING </p>
 
         </div>

@@ -110,23 +110,49 @@ export default function PrebuiltModelsSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* ===== ROW 1 : CONTENT ===== */}
         <div className="w-full max-w-4xl mb-10 sm:mb-12 md:mb-16">
-          <p className="text-[12px] sm:text-[14px] md:text-[16px] uppercase tracking-wide text-black mb-2 sm:mb-3">
+          <motion.p className="text-[12px] sm:text-[14px] md:text-[16px] uppercase tracking-wide text-black mb-2 sm:mb-3"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          >
             Prebuilt Models
-          </p>
+          </motion.p>
 
-          <h2 className="max-w-3xl text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-[500] text-black leading-tight mb-4 sm:mb-5 md:mb-6 ">
+          <motion.h2 className="max-w-3xl text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-[500] text-black leading-tight mb-4 sm:mb-5 md:mb-6 "
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay:0.3 }}
+          >
             Ready to Deploy AI Models for Real World Use 
-          </h2>
+          </motion.h2>
 
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-black mb-6 sm:mb-7 md:mb-8 max-w-xl w-full leading-relaxed">
+          <motion.p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-black mb-6 sm:mb-7 md:mb-8 max-w-xl w-full leading-relaxed"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}>
             Pre-built models that cut development time and reduce manual effort, helping teams move faster with reliable real-world solutions that are easy to integrate, scale smoothly, and deliver results without starting from scratch or adding complexity.
-          </p>
-
+          </motion.p>
+          <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
+          >
           <SkShadeBtn text="Learn More" />
+          </motion.div>
+          
         </div>
         
         {/* Cards Grid - Responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:ml-25">
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:ml-25"
+        initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
+        >
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -206,7 +232,7 @@ export default function PrebuiltModelsSection() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

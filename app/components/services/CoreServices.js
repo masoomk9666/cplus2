@@ -9,6 +9,19 @@ import {
   Workflow,
   Shield,
   ArrowRight,
+  BrainCircuit,
+  TrainFront,
+  CloudSync,
+  TrainFrontTunnel,
+  MessageCircleMore,
+  AudioLines,
+  DatabaseZap,
+ChartNoAxesCombined,
+CloudLightning,
+ServerCog,
+Eye,
+Wallpaper,
+
 } from "lucide-react";
 
 /* =======================
@@ -47,91 +60,91 @@ const services = [
     title: "LLM Development Services",
     description: "We develop and fine-tune large language models tailored to business needs for accuracy, performance, and real-world use.",
     categories: ["AWS", "Azure", "GCP", "DevOps"],
-    icon: Workflow,
+    icon: BrainCircuit,
     tab: "ai",
   },
   {
     title: "AI Agent Development Services",
     description: "We build intelligent AI agents that make decisions, execute tasks autonomously, and support complex business workflows.",
     categories: ["React", "Next.js", "Node.js", "Tailwind"],
-    icon: MessageSquare,
+    icon: TrainFront,
     tab: "ai",
   },
   {
     title: "Intelligent Automation Services",
     description: "We automate repetitive processes using intelligent systems that improve efficiency, reduce errors, and free teams to focus on growth.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: CloudSync,
     tab: "ai",
   },
   {
     title: "AI Chatbot Development",
     description: "We design AI chatbots that deliver instant support, improve customer experience, and handle conversations across platforms.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: TrainFrontTunnel,
     tab: "ai",
   },
   {
     title: "Conversational AI Development",
     description: "We design AI chatbots that deliver instant support, improve customer experience, and handle conversations across platforms.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: MessageCircleMore,
     tab: "ai",
   },
   {
     title: "Voice AI Development Services",
     description: "We build voice AI solutions that enable speech recognition, voice assistants, and natural interactions for modern applications.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: AudioLines,
     tab: "ai",
   },
   {
     title: "Data Engineer Services",
     description: "We build reliable data pipelines that collect, process, and transform data to support analytics, AI systems, and scalable business reporting.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: DatabaseZap,
     tab: "cloud",
   },
   {
     title: "Data Analytics",
     description: "We convert raw data into meaningful insights through dashboards, reporting, and analytics that help teams make faster and smarter decisions.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: ChartNoAxesCombined,
     tab: "cloud",
   },
   {
     title: "Cloud Services",
     description: "We deliver secure and scalable cloud solutions that modernize infrastructure, improve reliability, and support business growth across environments.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: CloudLightning,
     tab: "cloud",
   },
   {
     title: "DevOps Services",
     description: "We streamline development and operations using automation, CI CD pipelines, and monitoring to deliver software faster with stability and security.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: Workflow,
     tab: "cloud",
   },
   {
     title: "Platform Engineering Services",
     description: "We design resilient platforms that enable teams to build, deploy, and scale applications efficiently using modern infrastructure and tooling.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: ServerCog,
     tab: "cloud",
   },
   {
     title: "Computer Vision Development",
     description: "We develop computer vision solutions that analyze images and video to enable automation, quality inspection, and intelligent decision-making.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: Eye,
     tab: "cloud",
   },
   {
     title: "Software Development Services",
     description: "We build reliable, scalable software solutions tailored to business needs, helping organizations modernize systems, improve efficiency, and deliver real value.",
     categories: ["Pentesting", "Encryption", "SOC", "Audit"],
-    icon: Shield,
+    icon: Wallpaper,
     tab: "software",
   },
   {
@@ -313,7 +326,7 @@ const handleTabClick = (index) => {
 
                       {/* Icon */}
                       <div className="relative z-10 flex items-center justify-center w-full h-full">
-                        <Icon className="w-6 h-6 md:w-7 md:h-7 text-white transition-transform duration-700 ease-out group-hover:scale-110" />
+                        <Icon className="w-6 h-6 md:w-7 md:h-7 text-black transition-transform duration-700 ease-out group-hover:text-white group-hover:scale-110" />
                       </div>
 
                     </div>

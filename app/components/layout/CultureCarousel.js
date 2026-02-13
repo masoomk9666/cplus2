@@ -6,38 +6,38 @@ export default function CultureCarousel() {
   const cultureData = [
     {
       id: 1,
-      image: "/images/about/cultureCarousel/01.png",
+      image: "/images/about/cultureCarousel/nust.png",
       title: "About the achievement",
       description:
         "Most companies struggle to turn AI ideas into production-ready systems.",
     },
     {
       id: 2,
-      image: "/images/about/cultureCarousel/02.png",
+      image: "/images/about/cultureCarousel/game.jpeg",
       title: "Team Recognition",
       description: "Celebrating milestones achieved by our global teams.",
     },
     {
       id: 3,
-      image: "/images/about/cultureCarousel/02.png",
+      image: "/images/about/cultureCarousel/nust.png",
       title: "Innovation Award",
       description: "Recognizing excellence in AI-driven innovation.",
     },
     {
       id: 4,
-      image: "/images/about/cultureCarousel/02.png",
+      image: "/images/about/cultureCarousel/birthday.png",
       title: "Global Culture",
       description: "Diverse teams working together worldwide.",
     },
     {
       id: 5,
-      image: "/images/about/cultureCarousel/02.png",
+      image: "/images/about/cultureCarousel/outing.png",
       title: "Global Culture",
       description: "Diverse teams working together worldwide.",
     },
     {
       id: 6,
-      image: "/images/about/cultureCarousel/02.png",
+      image: "/images/about/cultureCarousel/game.jpeg",
       title: "Global Culture",
       description: "Diverse teams working together worldwide.",
     },

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -69,7 +68,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[60vh]">
+    <section className="relative w-full min-h-[50vh] md:min-h-[70vh]">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 7000, disableOnInteraction: false }}
@@ -87,7 +86,7 @@ const Hero = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+            <div className="relative w-full min-h-[50vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
               
               {/* Background Video */}
               <video

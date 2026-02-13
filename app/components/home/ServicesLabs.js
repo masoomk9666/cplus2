@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import SkShadeBtn from "../layout/SkShadeBtn";
 import { LuArrowUpRight } from "react-icons/lu";
+import { motion } from "framer-motion"
 import {
   ShieldCheck,
   Activity,
@@ -382,16 +383,30 @@ export default function ServicesLabs() {
 
   return (
     <section className="max-w-7xl mx-auto py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-0">
-      <p className="text-[12px] sm:text-[14px] md:text-[16.3px] uppercase tracking-widest text-black text-center">
+      <motion.p className="text-[12px] sm:text-[14px] md:text-[16.3px] uppercase tracking-widest text-black text-center"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         Built In-House, Designed to Grow
-      </p>
+      </motion.p>
 
-      <h2 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-[500] text-center mt-2 leading-tight md:leading-normal">
+      <motion.h2 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-[500] text-center mt-2 leading-tight md:leading-normal"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}>
         Our In-House Solutions
-      </h2>
+      </motion.h2>
 
       {/* Tabs - Responsive - Hover does NOT pause here */}
-      <div className="flex justify-center gap-2 mt-4 sm:mt-6 flex-wrap px-2">
+      <motion.div className="flex justify-center gap-2 mt-4 sm:mt-6 flex-wrap px-2"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+      >
         {LABS.map((item, index) => {
           // const isLastTab = index === LABS.length - 1;
           const isFirstTab = index === 0;
@@ -439,8 +454,8 @@ export default function ServicesLabs() {
                   }`}
               >
                 <span className={` ${activeTab === index ? "text-[#D0F94A]" : "text-black"} `}> {item.btnIcon}</span>
-                  {item.tab}
-                  {/* <span className={`absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-20 h-3 sm:h-4 md:h-6 rounded-full bg-white overflow-hidden ${activeTab === index ? "opacity-100" : "opacity-0 " } scale-95 blur-sm pointer-events-none transition-all duration-500 ease-in-out`}></span> */}
+                {item.tab}
+                {/* <span className={`absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-20 h-3 sm:h-4 md:h-6 rounded-full bg-white overflow-hidden ${activeTab === index ? "opacity-100" : "opacity-0 " } scale-95 blur-sm pointer-events-none transition-all duration-500 ease-in-out`}></span> */}
               </button>
             </div>
           );
@@ -456,16 +471,21 @@ export default function ServicesLabs() {
           </div>
           <span className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-20 sm:w-32 md:w-40 h-2 sm:h-3 md:h-4 bg-white blur-sm opacity-100 rounded-full"></span>
         </button>
-      </div>
+      </motion.div>
 
       {/* Main Grid - Responsive - Hover DOES pause here */}
-      <div
+      <motion.div
         onMouseEnter={handleContentMouseEnter}
         onMouseLeave={handleContentMouseLeave}
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
       >
         {isFirstItem ? (
           /* ✅ LAST ITEM VIEW (ONLY H1) - Responsive */
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1.5fr_1.2fr_1fr] gap-3 sm:gap-4 mt-4 sm:mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1.5fr_1.2fr_1fr] gap-3 sm:gap-4 mt-4 sm:mt-6"
+          >
             {/* Column 1 */}
             <div className="bg-gradient-to-b from-[#3CDB9D] to-[#D0F94A] p-[1px] sm:p-[2px] rounded-lg col-span-1 lg:col-span-2 xl:col-span-1">
               <div
@@ -648,7 +668,7 @@ export default function ServicesLabs() {
             </div>
           </div>
         )}
-      </div>
+      </motion.div>
 
       {/* Progress Line */}
       <div className="mt-6 sm:mt-8 md:mt-10 h-[3px] sm:h-[4px] bg-gray-200 relative overflow-hidden">

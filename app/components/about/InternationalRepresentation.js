@@ -193,12 +193,12 @@ const InternationalRepresentation = () => {
 
         {/* RIGHT COLUMN */}
         <div className="relative w-full flex flex-col justify-center  order-1 lg:order-2">
-          <div>
-            <h2 className="text-[24px] md:text-[48px] font-medium mb-4  md:leading-12 lg:leading-auto">
+          <div className="py-10 space-y-6">
+            <h2 className="text-[24px] md:text-[48px] font-medium  md:leading-12 lg:leading-tight">
               {heading}
             </h2>
 
-            <p className="text-[14px] md:text-[18px] text-gray-700 mb-4 md:mb-8">
+            <p className="text-[14px] md:text-[18px] text-black ">
               {description}
             </p>
           </div>

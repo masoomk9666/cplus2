@@ -2,26 +2,44 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import SkShadeBtn from "../layout/SkShadeBtn";
+import { motion } from "framer-motion"
 
 export default function Labs() {
   return (
     <section className="w-full bg-white pt-20 md:pt-30 lg:pt-35 pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-0">
       <div className="max-w-7xl mx-auto">
         {/* Sub Heading */}
-        <p className="text-center text-[12px] sm:text-[14px] md:text-[16px] tracking-widest text-black mb-2 md:mb-3">
+        <motion.p
+          className="text-center text-[12px] sm:text-[14px] md:text-[16px] tracking-widest text-black mb-2 md:mb-3"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           UNLOCKING TOMORROW’S DIGITAL POTENTIAL
-        </p>
+        </motion.p>
+
 
         {/* Main Heading */}
-        <h2 className="text-center text-[24px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-medium mb-8 md:mb-10 lg:mb-12 leading-tight md:leading-normal">
+        <motion.h2 className="text-center text-[24px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-medium mb-8 md:mb-10 lg:mb-12 leading-tight md:leading-normal"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        >
           Our AI Driven Development Labs
-        </h2>
+        </motion.h2>
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-[1.5fr_1.3fr_1fr] gap-4 md:gap-6 lg:gap-4">
           {/* ================= COLUMN 1 ================= */}
 
-          <div className="group relative rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[600px] bg-gradient-to-r from-[#AEDBC9] to-[#DDF6E4] overflow-hidden">
+          <motion.div className="group relative rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[600px] bg-gradient-to-r from-[#AEDBC9] to-[#DDF6E4] overflow-hidden"
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          >
             <div
               className="absolute inset-0 bg-white/25 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 z-[1]"
             />
@@ -55,14 +73,18 @@ export default function Labs() {
               className="absolute bottom-0 right-0 w-full max-w-[100%] sm:max-w-none group-hover:scale-110 lg:group-hover:scale-120 group-hover:bottom-4 lg:group-hover:bottom-8 z-0 pointer-events-none transition-all duration-600 ease-in-out"
               alt="Brain"
             />
-          </div>
+          </motion.div>
 
           {/* ================= COLUMN 2 ================= */}
           <div className="flex flex-col gap-4 md:gap-6 lg:gap-4">
             {/* Box 1 */}
-            <div
+            <motion.div
               className="group relative rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 min-h-[250px] sm:min-h-[280px] md:min-h-[320px] bg-cover bg-center overflow-hidden"
               style={{ backgroundImage: "url('/images/newlab/bg1.png')" }}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
               <div
                 className="absolute inset-0 bg-white/25 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 z-[1]"
@@ -87,12 +109,16 @@ export default function Labs() {
                 className="absolute -bottom-10 sm:-bottom-12 md:-bottom-15 -right-5 sm:-right-8 md:-right-10 w-40 sm:w-55 md:w-70 z-0 group-hover:scale-110 lg:group-hover:scale-120 group-hover:-right-4 lg:group-hover:-right-8 group-hover:-bottom-8 lg:group-hover:-bottom-10 transition-all duration-900 ease-in-out"
                 alt=""
               />
-            </div>
+            </motion.div>
 
             {/* Box 2 */}
-            <div
+            <motion.div
               className="group relative rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 min-h-[250px] sm:min-h-[280px] md:min-h-[320px] bg-cover bg-center overflow-hidden"
               style={{ backgroundImage: "url('/images/newlab/bg2.png')" }}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
               <div
                 className="absolute inset-0 bg-white/25 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 z-[1]"
@@ -119,15 +145,22 @@ export default function Labs() {
                 className="absolute -bottom-8 sm:-bottom-10 md:-bottom-10 -right-5 sm:-right-8 md:-right-10 w-35 sm:w-45 md:w-55 z-0 group-hover:scale-110 lg:group-hover:scale-120 group-hover:-right-3 lg:group-hover:-right-5 transition-all duration-900 ease-in-out"
                 alt=""
               />
-            </div>
+            </motion.div>
+
+
+
           </div>
 
           {/* ================= COLUMN 3 ================= */}
           <div className="flex flex-col gap-4 md:gap-6 lg:gap-4">
             {/* Box 1 */}
-            <div
+            <motion.div
               className="group relative rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 min-h-[250px] sm:min-h-[280px] md:min-h-[320px] bg-cover bg-center overflow-hidden"
               style={{ backgroundImage: "url('/images/newlab/bg1.png')" }}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
               <div
                 className="absolute inset-0 bg-white/25 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 z-[1]"
@@ -154,12 +187,19 @@ export default function Labs() {
                 className="absolute -bottom-10 sm:-bottom-12 md:-bottom-15 -right-6 sm:-right-10 md:-right-12 w-40 sm:w-55 md:w-70 z-0 group-hover:scale-110 lg:group-hover:scale-120 group-hover:-right-4 lg:group-hover:-right-5 transition-all duration-900 ease-in-out"
                 alt=""
               />
-            </div>
+            </motion.div>
+
+
+
 
             {/* Box 2 */}
-            <div
+            <motion.div
               className="rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 bg-teal-100 min-h-[250px] sm:min-h-[280px] md:min-h-[320px] flex flex-col justify-between bg-cover bg-center"
               style={{ backgroundImage: "url('/images/newlab/bg4.png')" }}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
               <p className="text-[14px] sm:text-[15px] md:text-[16px]">
                 Explore how our labs design secure and scalable solutions transforming ideas into real world products automation and systems built for performance-driven-results and long term growth!
@@ -167,7 +207,8 @@ export default function Labs() {
               <div className="mt-4 sm:mt-6">
                 <SkShadeBtn text="Lets Connect" />
               </div>
-            </div>
+            </motion.div>
+
           </div>
         </div>
       </div>

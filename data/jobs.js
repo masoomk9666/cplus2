@@ -34,6 +34,40 @@ export const allJobs = [
       }
     }
   },
+  {
+    slug: "backend-developer-USA",
+    title: "Backend Developer",
+    posted: "Posted 1 Day Ago",
+    type: "On-Site",
+    time: "Full Time",
+    location: "Newyork, USA",
+    country: "USA",
+    department: "Engineering",
+
+    details: {
+      subTitle: "CAREERS",
+      jobTypeText: "On-Site · Full Time",
+
+      overview: {
+        description: [
+          "We are looking for a Backend Developer to build scalable APIs and services.",
+          "You will work on performance, security, and system architecture."
+        ],
+
+        requirements: [
+          "Strong experience with Node.js or PHP.",
+          "Knowledge of databases and API development.",
+          "Experience with cloud environments."
+        ],
+
+        qualifications: [
+          "Bachelor’s degree in Computer Science.",
+          "4+ years of backend development experience.",
+          "Strong debugging and optimization skills."
+        ]
+      }
+    }
+  },
 
   {
     slug: "frontend-developer-remote",

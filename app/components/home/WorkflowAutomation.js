@@ -5,17 +5,7 @@ export default function WorkflowAutomation() {
   return (
     <section className="w-full py-10 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6">
       <div className="relative max-w-7xl mx-auto overflow-hidden rounded-xl md:rounded-2xl lg:rounded-3xl bg-black">
-        {/* Right Side Background Image - Desktop Only */}
-        {/* <div className="absolute -top-107 -right-125 w-full h-full hidden lg:block z-101">
-          <Lightning hue={120} xOffset={0} speed={0.5} intensity={1} size={1} />
-        </div> */}
-        <div className="absolute -bottom-12 -right-105 w-full h-full hidden lg:block z-100">
-          {/* <img
-            src="/images/workflowAutomation/bg1.png"
-            alt="Background Lightning"
-            className="object-cover opacity-90 h-full z-100 filter drop-shadow-[0_40px_40px_rgba(34,197,94,0.90)]"
-          /> */}
-
+        <div className="absolute -bottom-12 -right-105 w-full h-full hidden lg:block md:z-50">
           <video
             src="/videos/servicesPage/thunder.mp4"
             autoPlay
@@ -29,7 +19,7 @@ export default function WorkflowAutomation() {
 
         <div className="relative grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-6 sm:gap-8 lg:gap-10 items-center px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-10 md:py-12 lg:py-16">
           {/* Left Content */}
-          <div className="text-white space-y-4 sm:space-y-5 md:space-y-6 z-100">
+          <div className="text-white space-y-4 sm:space-y-5 md:space-y-6 z-10">
             {/* Sub Heading */}
             <p className="text-[12px] sm:text-[14px] md:text-[16px] uppercase tracking-widest text-white">
               Reduce Manual Work with No-Code Automation
@@ -42,16 +32,6 @@ export default function WorkflowAutomation() {
 
             {/* Workflow Image Container */}
             <div className="relative w-full pt-4 sm:pt-6 -mt-6 sm:-mt-8 lg:-mt-10 h-[200px] sm:h-[250px] md:h-[300px] lg:h-90 overflow-hidden">
-              {/* Mobile/Tablet Background Overlay */}
-              {/* <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent lg:hidden"></div> */}
-
-              {/* Workflow GIF */}
-              {/* <img
-                src="/images/workflowAutomation/transparent_animation.gif"
-                alt="Workflow Automation Diagram"
-                className="absolute bottom-5 left-35 -translate-x-1/2 md:left-1/2 md:-bottom-5 lg:left-[-55px] lg:bottom-[-50px] lg:-translate-x-0 w-full max-w-none md:max-w-[600px] lg:max-w-none lg:w-full scale-150 -z-10"
-              /> */}
-
               <LottiePlayer
                 name="workflowAnimation"
                 loop={true}

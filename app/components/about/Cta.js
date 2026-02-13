@@ -21,7 +21,7 @@ const Cta = () => {
         <div className="absolute inset-0 bg-white/20 backdrop-blur-lg" />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6 py-15">
+        <div className="relative z-10 flex flex-col items-center text-center gap-5 px-6 py-15 leading-tight">
           
           {/* Heading */}
           <motion.h1
@@ -38,7 +38,7 @@ const Cta = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="my-6 max-w-3xl text-[14px] md:text-[18px] text-black"
+            className=" max-w-3xl text-[14px] md:text-[18px] text-black"
           >
             Have an idea to build a challenge to solve or a vision to explore Our team designs and delivers solutions that create impact Today
           </motion.p>

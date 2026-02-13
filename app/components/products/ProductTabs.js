@@ -105,8 +105,8 @@ const ProductTabs = () => {
   return (
     <section className="max-w-7xl mx-auto flex flex-col justify-center px-4 py-30 bg-white ">
       {/* Top Header */}
-      <div className="text-center mb-10">
-        <p className="text-black uppercase tracking-widest text-xs font-normal mb-3">
+      <div className="text-center mb-10 space-y-6">
+        <p className="text-black uppercase tracking-widest text-xs font-normal">
           Developed In-House. Designed to Grow
         </p>
         <h2 className="text-4xl md:text-5xl font-medium text-gray-900">
@@ -161,10 +161,6 @@ const ProductTabs = () => {
             <p className="text-black leading-relaxed text:[12px] md:text-[16px] mb-2">
               AI Lab is a dedicated innovation space where new artificial intelligence ideas are researched, built, and tested with precision. It explores emerging technologies, experiments with advanced models, and continuously improves solutions through real-world validation and feedback. The goal of AI Lab is to transform promising concepts into practical, scalable products that solve everyday business challenges effectively. By bridging research and application, AI Lab helps organizations adopt AI confidently and turn innovation into reliable tools that support daily work, improve efficiency, and enable smarter decision-making. It creates technology designed for real impact, not just experimentation alone.
             </p>
-
-            {/* <button className="bg-[#1A2E2A] hover:bg-black text-white px-10 py-3.5 rounded-full font-bold transition-all shadow-md">
-              Book Consultation
-            </button> */}
             <SkShadeBtn text="Start Your Project" />
           </div>
 

@@ -276,24 +276,14 @@ const ContactForm = () => {
   };
 
   return (
-    // <div>
-    //   <form
-    //     onSubmit={handleSubmit}
-    //     className="relative w-full max-w-3xl space-y-4 sm:space-y-5 md:space-y-6 p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg sm:rounded-xl md:rounded-2xl z-10"
-    //     style={{
-    //       backgroundImage: "url(images/contact/bg.png)",
-    //       backgroundSize: "cover",
-    //       backgroundPosition: "30% 20%",
-    //     }}
-    //   >
-    <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden z-10">
+    <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden z-10 p-3 lg:p-0">
       {/* Video Background */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover rounded-2xl p-3 lg:p-0"
       >
         <source src="/videos/contact/bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.

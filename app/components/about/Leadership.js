@@ -311,16 +311,16 @@ export default function Leadership() {
 
 
       {/* Team Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-15 p-15">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-15 p-2 md:p-15">
         {team.map((member, index) => (
           <div
             key={index}
-            className=" text-center w-full  h-auto"
+            className=" text-center w-full h-auto"
           >
             <img
               src={member.image}
               alt={member.name}
-              className="w-100 h-60  rounded-xl mx-auto mb-4 object-contain bg-gradient-to-b from-[rgba(208,249,74,0.3)] from-[10%] to-[rgba(60,219,157,0.4)] to-[50%]"
+              className="w-100 h-80 md:h-58  rounded-xl mx-auto mb-4 object-contain bg-gradient-to-b from-[rgba(208,249,74,0.3)] from-[10%] to-[rgba(60,219,157,0.4)] to-[50%]"
             />
 
             <h4 className="text-[18px] md:text-[24px] font-medium">{member.name}</h4>

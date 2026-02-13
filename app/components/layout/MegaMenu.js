@@ -31,7 +31,7 @@ const MegaMenu = ({ isScrolled, children, onMouseEnter, onMouseLeave, menuRef, i
       ref={menuRef}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`hidden lg:block fixed top-[80px] left-1/2 -translate-x-1/2 w-[85%] rounded-xl shadow-2xl z-50 transition-all duration-500 ${
+      className={`hidden lg:block fixed top-[80px] left-1/2 -translate-x-1/2 w-[85%] rounded-xl shadow-2xl z-100 transition-all duration-500 ${
         isScrolled
           ? "bg-white text-black"
           : isBlackText 

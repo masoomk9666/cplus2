@@ -18,14 +18,14 @@ const testimonials = [
     name: "Anna Williams",
     designation: "CTO, Magnolia",
     image: "/images/testimonials/02.png",
-    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo",
+    text: "Cplus Soft has completely transformed how we approach business growth and customer engagement. Their advanced AI technologies gave us unparalleled insights into customer behavior and preferences, helping us make data-driven decisions that fueled our expansion. Their tools are not just innovative but also incredibly user-friendly, ensuring our team could adopt them without a steep learning curve. I wholeheartedly recommend them to anyone looking to stay ahead of the competition.",
   },
   {
     id: 3,
     name: "Michael Brown",
     designation: "Manager, Magnolia",
     image: "/images/testimonials/03.png",
-    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo",
+    text: "Cplus Soft has completely transformed how we approach business growth and customer engagement. Their advanced AI technologies gave us unparalleled insights into customer behavior and preferences, helping us make data-driven decisions that fueled our expansion. Their tools are not just innovative but also incredibly user-friendly, ensuring our team could adopt them without a steep learning curve. I wholeheartedly recommend them to anyone looking to stay ahead of the competition.",
   },
 ];
 
@@ -95,8 +95,8 @@ export default function Testimonials() {
               What Our Clients Say
             </h2>
           </div>
-          <div className="flex gap-2 justify-start items-start mt-3 sm:mt-4">
-            <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[19.5px] text-black my-3 sm:my-4 leading-relaxed">
+          <div className="flex gap-2 justify-start items-start mt-3 sm:mt-0">
+            <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-black my-3 sm:my-4 leading-relaxed">
               {testimonials[activeIndex].text}
             </p>
           </div>

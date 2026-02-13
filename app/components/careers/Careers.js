@@ -38,7 +38,7 @@ const Careers = () => {
         </h2>
 
         {/* Subheading */}
-        <p className="text-center text-gray-600 text-[14px] md:text-[18px] max-w-3xl mx-auto mb-10">
+        <p className="text-center text-black text-[14px] md:text-[18px] max-w-3xl mx-auto mb-10">
           Your Future, Engineered at Indium AI may power our systems — but
           people power Indium. Join us, and let’s engineer infinite
           possibilities together.
@@ -54,7 +54,7 @@ const Careers = () => {
                 ${
                   activeTab === loc
                     ? "bg-black text-white"
-                    : "bg-[#E3E3E3] text-gray-700"
+                    : "bg-[#E3E3E3] text-black"
                 }`}
             >
               {loc}
@@ -71,8 +71,8 @@ const Careers = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full border rounded-lg py-3 pl-10 pr-12 text-sm outline-none"
           />
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-black w-4 h-4" />
+          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-black w-5 h-5" />
         </div>
 
         {/* Jobs List */}
@@ -82,35 +82,35 @@ const Careers = () => {
               <Link
               key={index}
                 href={`/careers/${job.slug}`}
-                className="block py-6 hover:bg-gray-50 transition"
+                className="block py-6 hover:bg-gray-50 transition px-5 rounded-2xl"
               >
                 <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 gap-4 items-center ">
                   <div className=" md:col-span-2 lg:col-span-1">
                     <h3 className="text-[#3CDB9D] font-medium text-[14px] md:text-[18px]">
                       {job.title}
                     </h3>
-                    <p className="text-gray-500 text-xs">{job.posted}</p>
+                    <p className="text-black text-xs">{job.posted}</p>
                   </div>
                   <div className="md:col-span-4  lg:col-span-3 w-full flex items-center justify-between gap-2">
-                    <div className="text-gray-600 text-[10px] md:text-[16px]">
+                    <div className="text-black text-[10px] md:text-[16px]">
                       {job.type}
                     </div>
 
                     <span className="block md:hidden h-4 w-px bg-gray-300"></span>
 
-                    <div className="text-gray-600 text-[10px] md:text-[16px]">
+                    <div className="text-black text-[10px] md:text-[16px]">
                       {job.location}
                     </div>
 
                     <span className="block md:hidden h-4 w-px bg-gray-300"></span>
 
-                    <div className="text-gray-600 text-[10px] md:text-[16px]">
+                    <div className="text-black text-[10px] md:text-[16px]">
                       {job.department}
                     </div>
 
                     <span className="block md:hidden h-4 w-px bg-gray-300"></span>
 
-                    <div className="text-gray-600 text-[10px] md:text-[16px]">
+                    <div className="text-black text-[10px] md:text-[16px]">
                       {job.time}
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const Careers = () => {
               </Link>
             ))
           ) : (
-            <p className="text-center text-gray-500 py-10">No jobs found.</p>
+            <p className="text-center text-black py-10">No jobs found.</p>
           )}
         </div>
       </div>

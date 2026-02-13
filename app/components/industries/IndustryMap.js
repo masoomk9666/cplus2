@@ -262,8 +262,8 @@ const IndustryMap = ({ projects }) => {
     <div className="w-full h-[600px] rounded-[24px] overflow-hidden">
       {icon && (
         <MapContainer
-          center={[20, 0]}
-          zoom={2}
+          center={[30, 30]}
+          zoom={1}
           scrollWheelZoom={false}
           className="w-full h-full"
         >

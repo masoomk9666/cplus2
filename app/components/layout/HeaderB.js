@@ -1348,6 +1348,22 @@ const HeaderB = () => {
       <header className={`fixed top-0 w-full z-50 transition-all duration-500`}>
         <div className="flex items-center justify-between px-4 md:px-8 lg:px-30 py-3 bg-transparent">
           {/* Logo - ALWAYS visible when NOT scrolled or NOT collapsed */}
+
+          {isMobileMenuOpen ? 
+          <img
+            src="/images/logos/betaLogo.png"
+            alt="Logo"
+            className={`w-40 md:w-50 transition-all duration-500 z-100 ${
+              isMobile
+                ? isLogoHidden
+                  ? "-translate-y-20 opacity-0"
+                  : "translate-y-0 opacity-100"
+                : isLogoHidden
+                  ? "-translate-y-20 opacity-0"
+                  : "translate-y-0 opacity-100"
+            }`}
+          />
+          :
           <img
             src="/images/logos/betaBlackLogo.png"
             alt="Logo"
@@ -1361,6 +1377,8 @@ const HeaderB = () => {
                   : "translate-y-0 opacity-100"
             }`}
           />
+          }
+          
 
           <button
             className={`lg:hidden mobile-menu-toggle z-60 transition-all duration-300 rounded-full ${
@@ -1468,7 +1486,7 @@ const HeaderB = () => {
               ) : (
                 <Ellipsis
                   size={25}
-                  className="w-[fit-content] text-black cursor-pointer bg-transparent p-0 rounded-full transition-transform duration-300 transform"
+                  className="w-[fit-content] text-black cursor-pointer  bg-transparent p-0 rounded-full transition-transform duration-300 transform"
                   onMouseEnter={handleEllipsisHover}
                   onMouseLeave={handleEllipsisLeave}
                 />
@@ -1478,22 +1496,22 @@ const HeaderB = () => {
             {/* Language Button - ONLY hidden when scrolled AND collapsed */}
             {!isScrolled && 
             <div
-              className={`ml-4 flex items-center space-x-0 transition-all duration-500 rounded-full p-2 ${
+              className={`ml-4 flex items-center space-x-0 transition-all duration-500 bg-[#D0F94A] rounded-full p-2 ${
                 shouldHideLanguage
-                  ? "-translate-y-20 opacity-0"
+                  ? "-translate-y-50 opacity-0"
                   : "translate-y-0 opacity-100"
-              } ${
-                isCollapsed
-                  ? "bg-[#D0F94A]"
-                  : isScrolled
-                    ? "bg-white"
-                    : "bg-white/10"
-              }`}
+              } 
+              ${
+                isScrolled
+                    ? "-translate-y-50 opacity-0"
+                    : "translate-y-0 opacity-100"
+              }
+              `}
             >
               <button
                 onClick={toggleLanguage}
                 className={`relative flex items-center justify-center text-[12px] font-medium tracking-wider transition-colors duration-300 rounded-full py-2 px-2 cursor-pointer ${
-                  language === "EN" ? "text-black font-bold" : "text-white"
+                  language === "EN" ? "text-black font-bold" : "text-black"
                 }`}
               >
                 {language}
@@ -1573,10 +1591,10 @@ const HeaderB = () => {
                     </div>
                   ))}
 
-                  <div className="flex items-center space-x-0 pt-6 rounded-full p-2 bg-white/10 w-fit">
+                  <div className="flex items-center space-x-0  rounded-full p-2 bg-white/10 w-fit">
                     <button
                       onClick={toggleLanguage}
-                      className={`relative flex items-center justify-center min-w-[80px] text-[14px] font-medium tracking-wider transition-colors duration-300 rounded-full py-2 px-4 ${
+                      className={`relative flex items-center justify-center min-w-[fit-content] text-[14px] font-medium tracking-wider transition-colors duration-300 rounded-full py-3 px-3 ${
                         language === "EN" ? "text-[#D0F94A] font-bold" : "text-white"
                       }`}
                     >

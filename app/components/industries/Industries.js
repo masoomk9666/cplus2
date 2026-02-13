@@ -17,14 +17,14 @@ const Industries = () => {
         .filter(Boolean)
     ),
   ];
-  const projects = portfolioData.map((item) => ({
-    id: item.slug,
-    title: item.hero?.name || "",
-    category: item.hero?.review?.meta?.industry || "",
-    desc: item.hero?.description || "",
-    logo: item.hero?.logo || "",
+  // const projects = portfolioData.map((item) => ({
+  //   id: item.slug,
+  //   title: item.hero?.name || "",
+  //   category: item.hero?.review?.meta?.industry || "",
+  //   desc: item.hero?.description || "",
+  //   logo: item.hero?.logo || "",
 
-  }));
+  // }));
   const [activeTab, setActiveTab] = useState('All');
   const [showAllTabs, setShowAllTabs] = useState(false);
   // const filteredProjects = activeTab === 'All' ? projects : projects.filter(p => p.category === activeTab);
@@ -59,7 +59,7 @@ const Industries = () => {
           <div className="inline-block rounded-[10px] relative p-[2px] bg-gradient-to-r from-[#D0F94A] via-[#D0F94A] to-[#00879F]">
             <button
               onClick={() => setShowAllTabs(!showAllTabs)}
-              className="min-w-[140px] px-6 py-[13px] rounded-[10px] text-[#131313] font-medium text-sm uppercase cursor-pointer tracking-wider flex items-center justify-center gap-2 bg-white hover:bg-gray-50 transition-colors w-full"
+              className="min-w-[140px] px-6 py-3 rounded-[10px] text-[#131313] font-medium text-sm uppercase cursor-pointer tracking-wider flex items-center justify-center gap-2 bg-white hover:bg-gray-50 transition-colors w-full h-full"
             >
               {showAllTabs ? 'SEE LESS -' : 'SEE MORE +'}
             </button>
@@ -87,20 +87,20 @@ const Industries = () => {
             {filteredProjects.length > 0 ? (
               filteredProjects.map((item) => (
                 // <Link key={item.slug} href={`industries/${item.slug}`} rel="noopener noreferrer">
-                  <div key={item.slug} className="bg-[#FBFBFB] p-6 rounded-[20px] flex items-start justify-between group cursor-pointer border border-transparent  transition-all min-h-[140px] shadow-sm">
-                    <div className="flex gap-5 w-full">
+                  <div key={item.slug} className="relative bg-[#FBFBFB] p-6 rounded-[20px] flex items-start justify-between group cursor-pointer border border-transparent  transition-all min-h-[140px] shadow-sm">
+                    <div className="flex flex-col md:flex-row gap-5 w-full">
                       <div className={`w-35 h-35 bg-black rounded-2xl flex items-center justify-center flex-shrink-0`}>
                         <img
                           src={item.hero.logo}
                         />
                         {/* <span className="text-white text-lg font-black italic tracking-tighter">{item.logo}</span> */}
                       </div>
-                      <div className="max-w-[80%]">
+                      <div className="max-w-full md:max-w-[80%]">
                         <h3 className="text-[18px] md:text-[24px] font-medium text-black mb-1">{item.hero.name}</h3>
                         <p className="text-black text-[12px] md:text-[16px] leading-relaxed">{item.hero.description}</p>
                       </div>
                     </div>
-                    <Link href={`industries/${item.slug}`} rel="noopener noreferrer">
+                    <Link href={`industries/${item.slug}`} rel="noopener noreferrer" className='absolute right-2'>
                       <button className="bg-gradient-to-r from-[#3CDB9D] via-[#D0F94A] p-2.5 rounded-full group-hover:scale-110 transition-transform flex-shrink-0 cursor-pointer">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                           <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -118,7 +118,7 @@ const Industries = () => {
         </div>
 
         {/* Right Side: Map Section */}
-        <div className="w-full h-[600px] bg-black rounded-[24px] relative overflow-hidden">
+        <div className="w-full h-[300px] md:h-[600px] bg-black rounded-[24px] relative overflow-hidden">
 
           <IndustryMap projects={filteredProjects} />
         </div>

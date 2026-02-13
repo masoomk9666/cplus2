@@ -1352,27 +1352,27 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 ${!isScrolled ? "w-full" : "w-[fit-content] right-0" } z-50 transition-all duration-500`}>
-        <div className={`flex items-center ${!isScrolled ? "justify-between" : "justify-end" } px-4 md:px-8 lg:px-30 py-3 bg-transparent`}>
+      <header className={`fixed top-0 ${!isScrolled ? "w-full" : "w-[fit-content] right-0"} z-50 transition-all duration-500`}>
+        <div className={`flex items-center ${!isScrolled ? "justify-between" : "justify-end"} px-4 md:px-8 lg:px-30 py-3 bg-transparent`}>
           {/* Logo - ALWAYS visible when NOT scrolled or NOT collapsed */}
 
-          {!isScrolled && 
-          <img
-            src="/images/logos/betaLogo.png"
-            alt="Logo"
-            className={`w-40 md:w-50 transition-all duration-500 z-100 ${isMobile
+          {!isScrolled &&
+            <img
+              src="/images/logos/betaLogo.png"
+              alt="Logo"
+              className={`w-40 md:w-50 transition-all duration-500 z-120 ${isMobile
                 ? isLogoHidden
                   ? "-translate-y-20 opacity-0"
                   : "translate-y-0 opacity-100"
                 : isLogoHidden
                   ? "-translate-y-20 opacity-0"
                   : "translate-y-0 opacity-100"
-              }`}
-          />
-            }
+                }`}
+            />
+          }
 
           <button
-            className={`lg:hidden mobile-menu-toggle z-60 transition-all duration-300 rounded-full ${isMobileMenuOpen ? "p-2" : "p-2 rounded-full"
+            className={`lg:hidden mobile-menu-toggle z-120 transition-all duration-300 rounded-full ${isMobileMenuOpen ? "p-2" : "p-2 rounded-full"
               } ${getMobileMenuButtonBg()}`}
             onClick={toggleMobileMenu}
           >
@@ -1388,17 +1388,17 @@ const Header = () => {
             className={`hidden lg:flex items-center space-x-6 transition-all duration-[1000ms] ease-in-out ${shouldTranslateNav ? "translate-x-10" : "translate-x-0"
               }
               `}
-              
+
           >
             <div
               ref={navRef}
               onMouseEnter={handleNavMouseEnter}
               onMouseLeave={handleNavMouseLeave}
               className={`relative flex items-center p-2 rounded-full transition-all ease-[cubic-bezier(0.4,0,0.2,1)] ${isCollapsed
-                  ? "bg-[#D0F94A]"
-                  : isScrolled
-                    ? "bg-white"
-                    : "bg-white/10"
+                ? "bg-[#D0F94A]"
+                : isScrolled
+                  ? "bg-white"
+                  : "bg-white/10"
                 }`}
             >
               <span
@@ -1484,34 +1484,34 @@ const Header = () => {
             </div>
 
             {/* Language Button - ONLY hidden when scrolled AND collapsed */}
-            {!isScrolled && 
-            <div
-              className={`ml-4 flex items-center space-x-0 transition-all duration-500 rounded-full p-2 ${shouldHideLanguage
+            {!isScrolled &&
+              <div
+                className={`ml-4 flex items-center space-x-0 transition-all duration-500 rounded-full p-2 ${shouldHideLanguage
                   ? "-translate-y-20 opacity-0 pointer-events-none"
                   : "translate-y-0 opacity-100 pointer-events-auto"
-                } ${isCollapsed
-                  ? "bg-[#D0F94A]"
-                  : isScrolled
-                    ? "bg-white"
-                    : "bg-white/10"
-                }`}
-            >
-              <button
-                onClick={toggleLanguage}
-                className={`relative flex items-center justify-center text-[12px] font-medium tracking-wider transition-colors duration-300 rounded-full py-2 px-2 cursor-pointer ${language === "EN" ? "text-white font-bold" : "text-white"
+                  } ${isCollapsed
+                    ? "bg-[#D0F94A]"
+                    : isScrolled
+                      ? "bg-white"
+                      : "bg-white/10"
                   }`}
               >
-                {language}
-              </button>
-            </div>
-}
+                <button
+                  onClick={toggleLanguage}
+                  className={`relative flex items-center justify-center text-[12px] font-medium tracking-wider transition-colors duration-300 rounded-full py-2 px-2 cursor-pointer ${language === "EN" ? "text-white font-bold" : "text-white"
+                    }`}
+                >
+                  {language}
+                </button>
+              </div>
+            }
           </nav>
         </div>
 
         {isMobileMenuOpen && (
           <div
             ref={mobileMenuRef}
-            className="lg:hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-lg pt-20"
+            className="lg:hidden fixed inset-0 z-110 bg-black/95 backdrop-blur-lg pt-20"
           >
             <div className="h-full flex flex-col">
               <div className="flex-1 overflow-y-auto px-6 pb-20">
@@ -1576,10 +1576,10 @@ const Header = () => {
                   ))}
 
 
-                  <div className="flex items-center space-x-0 pt-6 rounded-full p-2 bg-white/10 w-fit">
+                  <div className="flex items-center justify-center space-x-0  rounded-full p-2 bg-white/10 w-fit">
                     <button
                       onClick={toggleLanguage}
-                      className={`relative flex items-center justify-center min-w-[80px] text-[14px] font-medium tracking-wider transition-colors duration-300 rounded-full py-2 px-4 ${language === "EN" ? "text-[#D0F94A] font-bold" : "text-white"
+                      className={`relative flex items-center justify-center min-w-[fit-content] text-[14px] font-medium tracking-wider transition-colors duration-300 rounded-full py-3 px-3 ${language === "EN" ? "text-[#D0F94A] font-bold" : "text-white"
                         }`}
                     >
                       {language}

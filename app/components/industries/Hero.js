@@ -73,7 +73,7 @@ const Hero = () => {
                             <div
                                 key={idx}
                                 className="flex-shrink-0 
-                           w-15 sm:w-24 md:w-28 lg:w-32
+                           w-12 sm:w-24 md:w-28 lg:w-32
                            flex items-center justify-center"
                             >
                                 <img

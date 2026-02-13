@@ -53,7 +53,7 @@ export default function Hero() {
   return (
     <div>
       <section className="w-full bg-[#061c1f] text-white py-20 md:py-30">
-        <div className="max-w-7xl mx-auto px-4 py-5 text-center ">
+        <div className="max-w-7xl mx-auto px-4 py-10 text-center space-y-6">
           {/* Hero Title */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -72,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mt-4 max-w-4xl mx-auto text-[14px] md:text-[18px] text-white"
+            className="max-w-4xl mx-auto text-[14px] md:text-[18px] text-white"
           >
             Cplusoft is a software and web development company building secure and scalable digital products. We design web and mobile applications automate workflows and modernize systems to help businesses work faster reduce manual effort and grow with confidence using smart data driven technology.
           </motion.p>
@@ -114,20 +114,19 @@ export default function Hero() {
 
         {/* Vision Section */}
         <div className="bg-white text-black py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+          <div className="max-w-7xl space-y-6 mx-auto text-center">
             <motion.h4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className=" text-[12px] md:text-[16px] tracking-widest uppercase text-black"
+              className="text-[12px] md:text-[16px] tracking-widest uppercase text-black"
             >
               Our Vision
             </motion.h4>
-
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="mt-6 text-[18px] md:text-[36px]  font-normal mb-4"
+              className="text-[18px] md:text-[36px] font-normal leading-tight -mt-2"
             >
               {displayText}
               <span className="animate-pulse">|</span>

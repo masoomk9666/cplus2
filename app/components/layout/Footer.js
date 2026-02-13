@@ -3,6 +3,7 @@ import { MapPin, Phone } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 export default function Footer() {
   const locations = [
@@ -58,180 +59,197 @@ export default function Footer() {
     <footer className="w-full">
       <section className="relative w-full max-w-7xl mx-auto pt-12 sm:pt-16 md:pt-20 px-4 sm:px-6 lg:-mb-40">
         {/* FIRST ROW */}
-        <div className="py-4 flex flex-col items-center ">
-          <h3 className="text-black text-[12px] sm:text-[14px] md:text-[16px] font-[500] mb-2">CONTACT US</h3>
-          <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-[500] leading-tight mb-2 text-center">
+        <div className="py-4 flex flex-col items-center gap-5">
+          <motion.h3 className="text-black text-[12px] sm:text-[14px] md:text-[16px] font-[500] "
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          >
+            CONTACT US
+          </motion.h3>
+          <motion.h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-[500] leading-tight text-center"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" , delay: 0.3 }}
+          >
             Do You Have A Challenge For Us?
-          </h2>
-          <p className="text-center w-full max-w-2xl text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] px-2 sm:px-0">
+          </motion.h2>
+          <motion.p className="text-center w-full max-w-2xl text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] px-2 sm:px-0"
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay:0.6 }}
+          >
             Share your toughest business challenge and let our experts design scalable secure solutions that turn ideas into action, accelerate growth and deliver measurable results today!
-          </p>
+          </motion.p>
         </div>
 
         {/* 2ND ROW */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-6 sm:gap-8 md:gap-10 rounded-xl items-center mt-6 sm:mt-8 md:mt-10 overflow-hidden bg-transparent max-w-7xl mx-auto">
-         
-         <div className="w-full">
-          <form
-            onSubmit={handleSubmit}
-            className="relative w-full max-w-full lg:max-w-3xl space-y-4 sm:space-y-5 md:space-y-6 p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg sm:rounded-xl md:rounded-2xl z-10"
-            style={{
-              backgroundImage: "url(images/contact/bg.png)",
-              backgroundSize: "cover",
-              backgroundPosition: "30% 20%",
-            }}
-          >
-            <div className="absolute inset-0 bg-white/20 pointer-events-none rounded-lg sm:rounded-xl md:rounded-2xl -z-10 h-full" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          <div className="w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="relative w-full max-w-full lg:max-w-3xl space-y-4 sm:space-y-5 md:space-y-6 p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg sm:rounded-xl md:rounded-2xl z-10"
+              style={{
+                backgroundImage: "url(images/contact/bg.png)",
+                backgroundSize: "cover",
+                backgroundPosition: "30% 20%",
+              }}
+            >
+              <div className="absolute inset-0 bg-white/20 pointer-events-none rounded-lg sm:rounded-xl md:rounded-2xl -z-10 h-full" />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Your Name
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    required
+                  />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm">{errors.name}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Your Email
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    required
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm">{errors.email}</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Company Name
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, company: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Project Type</label>
+                  <input
+                    type="text"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, projectType: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Phone Number
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Company URL</label>
+                  <input
+                    type="url"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, website: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">Region
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, region: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-[14px] sm:text-[15px] md:text-[16px]">
+                    Services you are looking for
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
+                    onChange={(e) =>
+                      setFormData({ ...formData, service: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+              </div>
+
               <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Your Name
+                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Project Details
                   <span className="text-red-500 ml-1">*</span>
                 </label>
-                <input
-                  type="text"
+                <textarea
+                  rows="3"
                   className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
                   onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
+                    setFormData({ ...formData, message: e.target.value })
                   }
                   required
-                />
-                {errors.name && (
-                  <p className="text-red-500 text-sm">{errors.name}</p>
+                ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-sm">{errors.message}</p>
                 )}
+
               </div>
 
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Your Email
-                  <span className="text-red-500 ml-1">*</span>
-                </label>
-                <input
-                  type="email"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  required
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email}</p>
-                )}
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="group text-[14px] sm:text-[16px] md:text-[18px] bg-black text-white px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-2 rounded-full font-[400] cursor-pointer relative overflow-hidden"
+                >
+                  Send Message
+                  <span className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-3 sm:h-4 md:h-6 rounded-full bg-white opacity-0 scale-95 blur-sm pointer-events-none transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100 z-10"></span>
+                </button>
               </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Company Name 
-                  <span className="text-red-500 ml-1">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, company: e.target.value })
-                  }
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Project Type</label>
-                <input
-                  type="text"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, projectType: e.target.value })
-                  }
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Phone Number 
-                  <span className="text-red-500 ml-1">*</span>
-                </label>
-                <input
-                  type="tel"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Company URL</label>
-                <input
-                  type="url"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, website: e.target.value })
-                  }
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">Region
-                  <span className="text-red-500 ml-1">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, region: e.target.value })
-                  }
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="text-[14px] sm:text-[15px] md:text-[16px]">
-                  Services you are looking for
-                  <span className="text-red-500 ml-1">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                  onChange={(e) =>
-                    setFormData({ ...formData, service: e.target.value })
-                  }
-                  required
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="text-[14px] sm:text-[15px] md:text-[16px]">Project Details
-                <span className="text-red-500 ml-1">*</span>
-              </label>
-              <textarea
-                rows="3"
-                className="w-full border border-[2px] rounded-md px-3 sm:px-4 py-2 sm:py-3 md:py-3 mt-1 bg-white"
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                required
-              ></textarea>
-              {errors.message && (
-                <p className="text-red-500 text-sm">{errors.message}</p>
-              )}
-              
-            </div>
-
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="group text-[14px] sm:text-[16px] md:text-[18px] bg-black text-white px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-2 rounded-full font-[400] cursor-pointer relative overflow-hidden"
-              >
-                Send Message
-                <span className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-3 sm:h-4 md:h-6 rounded-full bg-white opacity-0 scale-95 blur-sm pointer-events-none transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100 z-10"></span>
-              </button>
-            </div>
-          </form>
+            </form>
           </div>
           <div className="relative flex flex-col items-center lg:items-start h-full w-full justify-center mt-6 sm:mt-8 lg:mt-0">
             <img
@@ -319,12 +337,12 @@ export default function Footer() {
 
             {/* COPYRIGHT */}
             <p className="text-center text-[#D0F94A] text-[13px] sm:text-[14px] md:text-[16px] order-1 md:order-2 mb-4 sm:mb-0">
-              © 2023 Copyright. All rights reserved.
+              © 2026 Copyright. All rights reserved.
             </p>
 
             {/* LINKS */}
-            <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-[13px] sm:text-[14px] md:text-[16px] justify-center order-3">
-              <a href="#" className="hover:text-white transition">
+            {/* <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-[13px] sm:text-[14px] md:text-[16px] justify-center order-3">
+              <a href="/services" className="hover:text-white transition">
                 Services
               </a>
               <a href="#" className="hover:text-white transition">
@@ -333,9 +351,15 @@ export default function Footer() {
               <a href="#" className="hover:text-white transition">
                 Company
               </a>
-              <a href="#" className="hover:text-white transition">
+              <a href="/contact" className="hover:text-white transition">
                 Contact
               </a>
+            </div> */}
+            <div className="flex gap-6 text-white text-[14px] md:text-[18px] order-3">
+              <a href="/about">About us</a>
+              <a href="/industries">Industries</a>
+              <a href="/career">Career</a>
+              <a href="/contact">Contact</a>
             </div>
           </div>
         </div>
